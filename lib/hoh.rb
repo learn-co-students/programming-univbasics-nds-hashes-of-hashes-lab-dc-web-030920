@@ -30,7 +30,33 @@
 #   sub_category: nil
 # }
 
-def naming_system
+# def naming_system
+#   portion_combo = {
+#     portion_1 = {
+#       label: "Kingdom",
+#       sub_category: {
+#         label: "Phylum",
+#         sub_category: {
+#           label: "Class"
+#         }
+#       }
+#     },
+#     portion_2 = {
+#       label: "Order",
+#     },
+#     portion_3 = {
+#       label: "Family",
+#       sub_category: {
+#         label: "Genus"
+#       }
+#     },
+#     portion_4 = {
+#       label: "Species",
+#       sub_category: nil
+#     }
+#   }
+#   portion_combo
+# end
   # Remember:
   #  Kingdom
   #  Phylum
@@ -41,5 +67,31 @@ def naming_system
   #  Species
   # So, if we have the "Kingdom" node we should be able to "tunnel" into the
   # HoH all the way to Species!
-
+  def naming_system
+    portion_combo = {
+        label: "Kingdom",
+        sub_category: {
+          label: "Phylum",
+          sub_category: {
+            label: "Class",
+            sub_category: {
+              label: "Order",
+                sub_category: {
+                  label: "Family",
+                  sub_category: {
+                    label: "Genus",
+                    sub_category: {
+                      label: "Species",
+                      sub_category: nil
+                    },
+                  },
+                },
+            },
+         },
+      }
+    }
+    portion_combo
 end
+
+
+
